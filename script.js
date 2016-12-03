@@ -6,22 +6,12 @@ var unit = 'f';
 
  function getCoOrdinates(unit){
    $.getJSON('http://ipinfo.io', function(data){
-     var lat = data.loc.split(',')[0];
-     var long = data.loc.split(',')[1];
-
-       add = "http://api.wunderground.com/api/3ab6e3c2b08b8f92/conditions/q/"+ lat + "," + long + ".json";
-
-       $.get(add,
-      function(data){
-        place = data.current_observation.display_location.city + ", " + data.current_observation.display_location.country ;
-       document.getElementById("location").innerHTML = place;
-
-       loadWeather(place, unit);
-
+     var place = data["city"] + ", " + data["country"];
+      document.getElementById("location").innerHTML = place;
+      loadWeather(place, unit);
       });
+};
 
-});
- };
 
 function loadWeather(location, unit) {
  $.simpleWeather({
