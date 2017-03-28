@@ -10,7 +10,7 @@ var unit = 'f';
   //     document.getElementById("location").innerHTML = place;
   //     loadWeather(place, unit);
   //     });
-      $.get("http://ipinfo.io", function(response) {
+      $.get("https://ipinfo.io", function(response) {
     console.log(response.ip, response.country);
   }, "jsonp")
 
