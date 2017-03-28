@@ -10,7 +10,8 @@ var unit = 'f';
   //     document.getElementById("location").innerHTML = place;
   //     loadWeather(place, unit);
   //     });
-      $.get("https://api.ipify.org?format=json", function(response) {
+      // $.get("https://api.ipify.org?format=json", function(response) {
+      $.get("http://ipinfo.io/json", function(response) {
     console.log(response.ip);
   })
 
