@@ -89,3 +89,9 @@ p#name {
     color: #4a4abf;
     margin-left: 250px
 }
+
+i{
+  color: white;
+  font-size: 5em;
+  margin: 10px;
+}
