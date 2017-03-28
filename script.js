@@ -11,7 +11,7 @@ var unit = 'f';
   //     loadWeather(place, unit);
   //     });
       // $.get("https://api.ipify.org?format=json", function(response) {
-      $.get("http://ipinfo.io/json", function(response) {
+      $.get("https://ipinfo.io/json", function(response) {
     console.log(response.ip);
   })
 
