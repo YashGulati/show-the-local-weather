@@ -1,3 +1,91 @@
-html{overflow-y: hidden}
-span{position: absolute; left: 15px; top: 15px;}
-body{background:#E6EEF6;text-align:center}.box{height:450px;width:600px;display:inline-block;position:relative;margin-top:100px;border-radius:5px;box-shadow:0 1px 4px rgba(0,0,0,0.3),0 0 20px rgba(0,0,0,0.1) inset;background-color:#9ED9EB}.box:before,.box:after{position:absolute;content:"";box-shadow:0 10px 25px 20px #518C96;top:40px;left:25px;bottom:50px;width:15%;z-index:-1;-webkit-transform:rotate(-8deg);-moz-transform:rotate(-8deg);transform:rotate(-8deg)}.box:after{-webkit-transform:rotate(8deg);-moz-transform:rotate(8deg);transform:rotate(8deg);right:25px;left:auto}h1{color:#fff;font-family:'Didact Gothic', sans-serif;font-weight:bold}h1.name{font-size:3.5em;margin:40px 0px 30px 0px}h1.location{font-size:2em}#temp{cursor:pointer;transition:all .3s ease}#temp:hover{font-size:2.1em;color:#ddd}#temp:focus{outline:none}.climate_bg img{height:25%;width:25%;position:relative;top:-20px}p#name{margin-top:50px;font-size:1.2em;font-weight:bold;color:#4a4abf;margin-left:250px}
+html {
+    overflow-y: hidden
+}
+
+span {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+body {
+    background: #E6EEF6;
+    text-align: center
+}
+
+.box {
+    height: 450px;
+    width: 600px;
+    display: inline-block;
+    position: relative;
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+    background-color: #9ED9EB
+}
+
+.box:before, .box:after {
+    position: absolute;
+    content: "";
+    box-shadow: 0 10px 25px 20px #518C96;
+    top: 40px;
+    left: 25px;
+    bottom: 50px;
+    width: 15%;
+    z-index: -1;
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    transform: rotate(-8deg)
+}
+
+.box:after {
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    transform: rotate(8deg);
+    right: 25px;
+    left: auto
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold
+}
+
+h1.name {
+    font-size: 3.5em;
+    margin: 40px 0px 30px 0px
+}
+
+h1.location {
+    font-size: 2em
+}
+
+#temp {
+    cursor: pointer;
+    transition: all .3s ease
+}
+
+#temp:hover {
+    font-size: 2.1em;
+    color: #ddd
+}
+
+#temp:focus {
+    outline: none
+}
+
+.climate_bg img {
+    height: 25%;
+    width: 25%;
+    position: relative;
+    top: -20px
+}
+
+p#name {
+    margin-top: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4a4abf;
+    margin-left: 250px
+}
