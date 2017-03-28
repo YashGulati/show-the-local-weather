@@ -5,15 +5,11 @@ var unit = 'f';
  });
 
  function getCoOrdinates(unit){
-  //  $.getJSON('http://ipinfo.io', function(data){
-  //    var place = data["city"] + ", " + data["country"];
-  //     document.getElementById("location").innerHTML = place;
-  //     loadWeather(place, unit);
-  //     });
-      // $.get("https://api.ipify.org?format=json", function(response) {
-      $.get("https://ipinfo.io/json", function(response) {
-    console.log(response.ip);
-  })
+   $.get('https://ipinfo.io/json', function(data){
+     var place = data["city"] + ", " + data["country"];
+      document.getElementById("location").innerHTML = place;
+      loadWeather(place, unit);
+      });
 
 };
 
