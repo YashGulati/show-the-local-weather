@@ -10,9 +10,9 @@ var unit = 'f';
   //     document.getElementById("location").innerHTML = place;
   //     loadWeather(place, unit);
   //     });
-      $.get("https://ipinfo.io", function(response) {
-    console.log(response.ip, response.country);
-  }, "jsonp")
+      $.get("https://api.ipify.org?format=json", function(response) {
+    console.log(response.ip);
+  })
 
 };
 
