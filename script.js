@@ -1,16 +1,13 @@
-var unit = 'f';
-
  $(document).ready(function() {
   getCoOrdinates('f');
  });
 
  function getCoOrdinates(unit){
    $.get('https://ipinfo.io/json', function(data){
-     var place = data["city"] + ", " + data["country"];
+     var place = data["city"] + ', ' + data['region'] + ", " + data["country"];
       $("#location").html(place);
       loadWeather(place, unit);
       });
-
 };
 
 function setWeatherIcon(condid) {
@@ -117,10 +114,8 @@ function setWeatherIcon(condid) {
         default: icon = 'wi-cloud';
           break;
       }
-
       return '<i class="wi '+icon+'"></i>';
 }
-
 
 function loadWeather(location, unit) {
  $.simpleWeather({
@@ -131,26 +126,18 @@ function loadWeather(location, unit) {
      html = '<p>'+weather.temp+' &deg;'+ unit.toUpperCase() + '</p>';
      $("#temp").html(html);
 
-    //  img = '<img src="img/' + weather.code + '.svg" />' + '<p>' + setWeatherIcon(weather.code) + '</p>';
-     img = setWeatherIcon(weather.code);
-     $(".climate_bg").html(img);
-     $(".text").html(weather.text);
+     icon = setWeatherIcon(weather.code);
+     weatherText = '<span id="weatherText">' + weather.text + '</span>'
+     $(".climate_bg").html(weatherText + icon);
    },
    error: function(error) {
      $(".text").html('<p>'+error+'</p>');
    }
- });
- }
+ })
+}
 
-
+var unit = 'f';
 function changeUnit() {
-
-  if (unit == 'f') {
-  unit = 'c';
+  unit = unit==='f'?'c':'f'
   getCoOrdinates(unit);
-  }
-  else if (unit == 'c') {
-  unit = 'f';
-  getCoOrdinates(unit);
-  }
 };
