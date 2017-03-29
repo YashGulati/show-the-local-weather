@@ -1,21 +1,39 @@
- $(document).ready(function() {
-  changeUnit();
- });
+$(document).ready(function() {
+changeUnit();
+});
 
+var unit = 'f';
+function changeUnit() {
+ unit = unit==='f'?'c':'f'
+ getCoOrdinates(unit);
+};
 
- var unit = 'f';
- function changeUnit() {
-   unit = unit==='f'?'c':'f'
-   getCoOrdinates(unit);
- };
-
- function getCoOrdinates(unit){
-   $.get('https://ipinfo.io/json', function(data){
+function getCoOrdinates(unit){
+ $.get('https://ipinfo.io/json', function(data){
      var place = data["city"] + ', ' + data['region'] + ", " + data["country"];
       $("#location").html(place);
       loadWeather(place, unit);
-      });
+    });
 };
+
+function loadWeather(location, unit) {
+ $.simpleWeather({
+  location: location,
+   woeid: '',
+   unit: unit,
+   success: function(weather) {
+     html = '<p>'+weather.temp+' &deg;'+ unit.toUpperCase() + '</p>';
+     $("#temp").html(html);
+
+     icon = setWeatherIcon(weather.code);
+     weatherText = '<span id="weatherText">' + weather.text + '</span>'
+     $(".climate_bg").html(weatherText + icon);
+   },
+   error: function(error) {
+     $(".text").html('<p>'+error+'</p>');
+   }
+ })
+}
 
 function setWeatherIcon(condid) {
   var icon = '';
@@ -122,23 +140,4 @@ function setWeatherIcon(condid) {
           break;
       }
       return '<i class="wi '+icon+'"></i>';
-}
-
-function loadWeather(location, unit) {
- $.simpleWeather({
-  location: location,
-   woeid: '',
-   unit: unit,
-   success: function(weather) {
-     html = '<p>'+weather.temp+' &deg;'+ unit.toUpperCase() + '</p>';
-     $("#temp").html(html);
-
-     icon = setWeatherIcon(weather.code);
-     weatherText = '<span id="weatherText">' + weather.text + '</span>'
-     $(".climate_bg").html(weatherText + icon);
-   },
-   error: function(error) {
-     $(".text").html('<p>'+error+'</p>');
-   }
- })
 }

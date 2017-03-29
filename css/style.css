@@ -12,7 +12,7 @@ body {
 }
 .container {
   background-color: rgba(70,150,180,0.5);
-  height: 300px;
+  height: 250px;
   width: 600px;
   display: inline-block;
   position: relative;
