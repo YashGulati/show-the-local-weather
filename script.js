@@ -1,6 +1,13 @@
  $(document).ready(function() {
-  getCoOrdinates('f');
+  changeUnit();
  });
+
+
+ var unit = 'f';
+ function changeUnit() {
+   unit = unit==='f'?'c':'f'
+   getCoOrdinates(unit);
+ };
 
  function getCoOrdinates(unit){
    $.get('https://ipinfo.io/json', function(data){
@@ -135,9 +142,3 @@ function loadWeather(location, unit) {
    }
  })
 }
-
-var unit = 'f';
-function changeUnit() {
-  unit = unit==='f'?'c':'f'
-  getCoOrdinates(unit);
-};
