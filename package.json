@@ -1,0 +1,23 @@
+{
+  "name": "showthelocalweather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-3.1.0.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YashGulati/show-the-local-weather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YashGulati/show-the-local-weather/issues"
+  },
+  "homepage": "https://github.com/YashGulati/show-the-local-weather#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  }
+}

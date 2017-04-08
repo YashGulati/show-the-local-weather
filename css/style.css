@@ -5,14 +5,18 @@ html {
   overflow-y: hidden;
 }
 body {
-  background: #117e7e;
+  background: #fafafa;
   text-align: center;
-  color: #444;
+  color: #777;
   cursor: default;
 }
+h1.title {
+  font-size: 2.8em;
+  margin-top: 50px;
+}
 .container {
-  background-color: rgba(70,150,180,0.5);
-  height: 250px;
+  background-color: rgba(70,150,200,0.1);
+  padding: 30px;
   width: 600px;
   display: inline-block;
   position: relative;
@@ -23,9 +27,6 @@ body {
 h1 {
   font-family: 'Didact Gothic', sans-serif;
   font-weight: bold;
-}
-h1.title {
-  font-size: 2.8em;
 }
 h1.location {
   font-size: 2em;

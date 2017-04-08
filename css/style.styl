@@ -1,8 +1,8 @@
 // bodyColor = #E6EEF6
 // containerColor = #9ED9EB
-bodyColor = rgba(17, 126, 126, 1)
-containerColor = rgba(70, 150, 180, 0.5)
-textColor = #444
+bodyColor = rgba(250, 250, 250, 1)
+containerColor = rgba(70, 150, 200, 0.1)
+textColor = #777
 temperHoverColor = #3cc
 *
   margin: none
@@ -13,9 +13,12 @@ body
   text-align: center
   color: textColor
   cursor: default;
+h1.title
+  font-size: 2.8em;
+  margin-top: 50px;
 .container
   background-color: containerColor
-  height: 250px;
+  padding: 30px;
   width: 600px;
   display: inline-block;
   position: relative;
@@ -25,8 +28,6 @@ body
 h1
   font-family: 'Didact Gothic', sans-serif;
   font-weight: bold
-  &.title
-    font-size: 2.8em;
   &.location
     font-size: 2em
 #temp
